@@ -8,7 +8,7 @@
             <option value="" selected>all</option>
             <option :key="item" v-for="item in selectors.categories">{{ item }}</option>
         </select>
-        <p align="center">{{ result.length }} items</p>
+        <p align="center">{{ result.length }} {{ result.length | itemEnding }}</p>
         <div class="catalog"><itemCard @cardclick="goToCard" :key='item.id' v-for="item in result" :item="item"> </itemCard></div>
     </div>
 </template>
